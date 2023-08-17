@@ -1,0 +1,64 @@
+1-Register
+- make static form with names like endpoint to use in set user data
+- make user hook with this names as elements names
+- make function  getUserData and follow any changes in inputs whith handle change to set this values in user hook
+- make function registerSubmit and use axios 
+- first make response and check if success(== 201) // see all steps in console
+- server errors -> make error hook to see all errors from server and if != 201 it will catch so set Error then show in html
+- frontend errors -> make rgxError hook and install joi package then handle errors and map this arr in html
+- add isLoading spinner in register btn using hook if it's val = true then load
+- navigate to login page if registerd successfully using useNavigate()
+/**************************************************************************/
+
+2- login
+- all the same register but use only fields used for login (phone , pass)
+- status changed to 200
+- change error to get value not object :
+{error && error.error && <div className="alert alert-danger">server Error == {error.error}</div>}
+
+
+/**************************************************************************/
+
+3-jwt token
+// at login :
+- set userToken at local storage with token 
+- make hook userToken at App to get this token and decode it in a function
+- send this fuunction to login 
+// at navbar :
+- send userToken as props to navbar then check if not empty show links and logout else show login and register
+// ProtectedRoute copmponent :
+- it's a function made in App without if user write path in Browsre url it will go without auth i made from the morning ya m3alem
+- check if token empty open login else return props.children (link sent (home,tv,movies..))
+- send this component in Route 
+- Navigate is a component imported from react-router-dom
+// refresh :
+- if user make refresh userToken will be null so navbar will be hidden again
+- coz app is the first rendered component useEffect (component did mount) to check on refresh if user logged in call function saveUserToken so userToken won't be null
+// LogOut :
+- make logout function which
+. setUserToken to null
+. remove localStorage token
+. navigate using useNavigate to login
+- then send this function as a props to Navbar component and handle click
+// arrow back to login :
+- after logging in if the user back using arrow i want to prevent him to back login page again
+- useEffect at login page to redirect him to home page if his token found
+/***************************************************************/
+4- Home component
+- get data with axios 
+- call api when in component did mount (useEffect with empty array) that is means when home component opens
+- add html and pass data
+
+/***************************************************************/
+
+5- MovieDetails component
+- Add nested routing
+- make movie div in home component Link to the movie id
+- useParams hook to get parameter from url
+- if movieDetails not null get data else load untill it comes
+ /***************************************************************/
+
+ Context
+ - instead of repeating the code make Store and take home hooks (movies,people,tv)
+ - wrap App in provider
+ - use context in home and components you need like people and tv
