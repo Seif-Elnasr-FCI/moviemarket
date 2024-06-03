@@ -12,15 +12,15 @@ const Footer = () => {
           <div className="col-md-3">
             <h4>Social Links</h4>
             <ul className="list-unstyled d-flex gap-3">
-              <li><a href="https://www.facebook.com/profile.php?id=100006004936837" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook fs-4"></i></a></li>
-              <li><a href="https://www.linkedin.com/in/khaled-karam" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin fs-4"></i></a></li>
-              <li><a href="https://www.instagram.com/oscar_karam11/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram fs-4"></i></a></li>
+              <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook fs-4"></i></a></li>
+              <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin fs-4"></i></a></li>
+              <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram fs-4"></i></a></li>
             </ul>
           </div>
           <div className="col-md-3">
             <h4>Contact <span className='fst-italic fw-bold text-warning'>U</span>s</h4>
-            <p>Email: khaledkaram880@gmail.com</p>
-            <p>Phone: 01013765852</p>
+            <p>Email: Ejada.com</p>
+            <p>Phone: 0123456789</p>
           </div>
         </div>
       </div>

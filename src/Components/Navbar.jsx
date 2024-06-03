@@ -33,9 +33,9 @@ export default function Navbar({userToken,logOut}) {
 
       <ul className="navbar-nav d-flex mb-2 mb-lg-0">
       <li className="nav-item d-flex align-items-center order-last order-lg-first">
-      <a href="https://www.facebook.com/profile.php?id=100006004936837" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook mx-2"></i></a>
-      <a href="https://www.linkedin.com/in/khaled-karam" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin mx-2"></i></a>
-      <a href="https://www.instagram.com/oscar_karam11/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram mx-2"></i></a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook mx-2"></i></a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin mx-2"></i></a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram mx-2"></i></a>
         </li>
         {userToken?<li className="nav-item">
           <span onClick={logOut} className="nav-link" style={{cursor:"pointer"}}>Logout</span>
